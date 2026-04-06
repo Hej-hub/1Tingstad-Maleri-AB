@@ -1,0 +1,1 @@
+# 1Tingstad-Maleri-AB
