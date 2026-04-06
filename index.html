@@ -871,11 +871,11 @@
 
 <!-- NAVBAR -->
 <nav>
-  <a class="logo" href="#" onclick="showPage('hem')">Tingstad <span>Måleri</span> AB</a>
+  <a class="logo" href="#toppen" onclick="scrollToTop(event)">Tingstad <span>Måleri</span> AB</a>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('hem')" id="nav-hem" class="active">Hem</a></li>
-    <li><a href="#" onclick="showPage('referens')" id="nav-referens">Referens bilder</a></li>
-    <li><a href="#" onclick="showPage('kontakt')" id="nav-kontakt">Kontakt</a></li>
+    <li><a href="#toppen" onclick="scrollToTop(event)" id="nav-hem" class="active">Hem</a></li>
+    <li><a href="#referenser" onclick="scrollToSection(event,'referenser')" id="nav-referens">Referens bilder</a></li>
+    <li><a href="#kontakt-sektion" onclick="scrollToSection(event,'kontakt-sektion')" id="nav-kontakt">Kontakt</a></li>
   </ul>
 </nav>
 
@@ -893,7 +893,7 @@
       <p class="hero-eyebrow">Tingstad Måleri AB — Est. 1995</p>
       <h1>Det moderna måleriföretaget</h1>
       <p>Vi vänder oss med våra tjänster till privatpersoner, byggföretag, fastighetsförvaltare och bostadsrättsföreningar.</p>
-      <a href="#" class="btn btn-filled" onclick="showPage('kontakt')">Begär offert</a>
+      <a href="#kontakt-sektion" onclick="scrollToSection(event,'kontakt-sektion')" class="btn btn-filled">Begär offert</a>
     </div>
     <div class="hero-dots">
       <button class="hero-dot active" onclick="goToSlide(0)"></button>
@@ -1041,7 +1041,7 @@
             <p>Vi hanterar ROT-avdraget åt dig direkt i fakturan — du betalar bara din del.</p>
           </div>
           <p>Hör gärna av dig till oss om du har frågor kring ROT-avdrag och vad som gäller för just ditt projekt.</p>
-          <a href="#" class="btn" style="margin-top:1.5rem;display:inline-block" onclick="showPage('kontakt')">Kontakta oss</a>
+          <a href="#kontakt-sektion" onclick="scrollToSection(event,'kontakt-sektion')" class="btn" style="margin-top:1.5rem;display:inline-block">Kontakta oss</a>
         </div>
         <div class="rot-visual">
           <div class="rot-percent">30%</div>
@@ -1063,7 +1063,7 @@
   </section>
 
   <!-- REFERENSER (startsida) -->
-  <section class="referenser">
+  <section class="referenser" id="referenser">
     <div class="container">
       <div class="ref-intro">
         <p class="section-label">Portfolio</p>
@@ -1116,7 +1116,7 @@
         </div>
       </div>
       <div style="text-align:center;margin-top:3rem">
-        <a href="#" class="btn" onclick="showPage('referens')">Se alla projekt</a>
+        <a href="#referenser" onclick="scrollToSection(event,'referenser')" class="btn">Se alla projekt</a>
       </div>
     </div>
   </section>
@@ -1140,16 +1140,142 @@
     </div>
   </section>
 
+  <!-- KONTAKT SEKTION -->
+  <section id="kontakt-sektion" style="background:var(--light-bg);padding:6rem 0;">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto 4rem;">
+        <p class="section-label">Hör av dig</p>
+        <h2 class="section-title">Kontakt</h2>
+        <div class="divider center"></div>
+        <p style="color:var(--text-muted)">Vi ser fram emot att höra från dig. Kontakta oss för en kostnadsfri offert.</p>
+      </div>
+      <div class="kontakt-grid">
+        <div class="kontakt-info">
+          <h3>Kontaktuppgifter</h3>
+
+          <div class="kontakt-row">
+            <div class="kontakt-row-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="kontakt-row-text">
+              <strong>Adress</strong>
+              <span>Box 4711, 421 47 Göteborg</span>
+            </div>
+          </div>
+
+          <div class="kontakt-row">
+            <div class="kontakt-row-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.06 2.82 2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.37A16 16 0 0014 16.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="kontakt-row-text">
+              <strong>Telefon</strong>
+              <span>031-12 34 56</span>
+            </div>
+          </div>
+
+          <div class="kontakt-row">
+            <div class="kontakt-row-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="kontakt-row-text">
+              <strong>E-post</strong>
+              <span>info@tingstadmaleri.se</span>
+            </div>
+          </div>
+
+          <div class="kontakt-row">
+            <div class="kontakt-row-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            </div>
+            <div class="kontakt-row-text">
+              <strong>Öppettider</strong>
+              <span>Måndag–fredag: 07:00–17:00</span>
+            </div>
+          </div>
+
+          <div style="margin-top:2.5rem;background:var(--white);padding:1.75rem;border-left:3px solid var(--gold)">
+            <p style="font-family:'Montserrat',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--dark);margin-bottom:0.5rem">Begär offert</p>
+            <p style="font-size:0.88rem;color:var(--text-muted)">Kontakta oss för en kostnadsfri offert. Vi återkommer inom 24 timmar på vardagar.</p>
+          </div>
+        </div>
+
+        <div class="kontakt-form">
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.5rem;color:var(--dark)">Skicka ett meddelande</h3>
+          <label>Namn</label>
+          <input type="text" placeholder="Ditt namn">
+          <label>E-post</label>
+          <input type="email" placeholder="din@epost.se">
+          <label>Telefon</label>
+          <input type="tel" placeholder="070-XXX XX XX">
+          <label>Meddelande</label>
+          <textarea placeholder="Beskriv ditt projekt eller ställ din fråga..."></textarea>
+          <button type="button">Skicka meddelande</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-logo">Tingstad <span>Måleri</span> AB</div>
-      <p>Box 4711, 421 47 Göteborg &nbsp;|&nbsp; <a href="tel:031-123456">031-12 34 56</a> &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection#e68f888089a6928f8881959287828b878a83948fc89583"><span class="__cf_email__" data-cfemail="aac3c4ccc5eadec3c4cdd9decbcec7cbc6cfd8c384d9cf">[email&#160;protected]</span></a></p>
+      <p>Box 4711, 421 47 Göteborg &nbsp;|&nbsp; <a href="tel:031-123456">031-12 34 56</a> &nbsp;|&nbsp; <a href="mailto:info@tingstadmaleri.se">info@tingstadmaleri.se</a></p>
       <p style="margin-top:1.5rem;font-size:0.78rem;opacity:0.5">© 2025 Tingstad Måleri AB. Alla rättigheter förbehållna.</p>
     </div>
   </footer>
 
 </div><!-- end hem -->
+
+<script>
+  function scrollToSection(e, id) {
+    e.preventDefault();
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    if (id === 'referenser') document.getElementById('nav-referens').classList.add('active');
+    if (id === 'kontakt-sektion') document.getElementById('nav-kontakt').classList.add('active');
+  }
+
+  function scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('nav-hem').classList.add('active');
+  }
+
+  // Update active nav on scroll
+  window.addEventListener('scroll', function() {
+    const refs = document.getElementById('referenser');
+    const kontakt = document.getElementById('kontakt-sektion');
+    const scrollY = window.scrollY + 100;
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    if (kontakt && scrollY >= kontakt.offsetTop) {
+      document.getElementById('nav-kontakt').classList.add('active');
+    } else if (refs && scrollY >= refs.offsetTop) {
+      document.getElementById('nav-referens').classList.add('active');
+    } else {
+      document.getElementById('nav-hem').classList.add('active');
+    }
+  });
+
+  // ── HERO SLIDESHOW ──
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.hero-dot');
+
+  function goToSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  setInterval(() => {
+    goToSlide((current + 1) % slides.length);
+  }, 5000);
+</script>
+</body>
+</html>
 
 <!-- ═══════════════ REFERENS PAGE ═══════════════ -->
 <div id="page-referens" class="page">
